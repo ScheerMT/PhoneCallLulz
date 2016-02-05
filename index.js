@@ -8,7 +8,7 @@ app.post('/voice', function(req, res) {
   console.log('Call received.');
 
   // Set the url of the song we are going to play
-  let songUrl = 'http://ocrmirror.org/files/music/remixes/Street_Fighter_2_Guile%27s_Theme_Goes_with_Metal_OC_ReMix.mp3'
+  let songUrl = 'https://s3.amazonaws.com/scheerhackfsu/rickastley_artists.mp3'
 
   // Generate a TwiML response
   let twiml = new twilio.TwimlResponse();
