@@ -1,5 +1,5 @@
-import express from 'express';
-import twilio from 'twilio';
+var express = require('express');
+var twilio = require('twilio');
 
 // Account SID and auth token are stored in environment variables.
 var app = express();
@@ -13,10 +13,10 @@ app.post('/voice', function(req, res) {
   console.log('Call received.');
 
   // Set the url of the song we are going to play
-  let songUrl = 'https://s3.amazonaws.com/scheerhackfsu/rickastley_artists.mp3'
+  var songUrl = 'https://s3.amazonaws.com/scheerhackfsu/rickastley_artists.mp3'
 
   // Generate a TwiML response
-  let twiml = new twilio.TwimlResponse();
+  var twiml = new twilio.TwimlResponse();
 
   // Set the response type as XML.
   res.header('Content-Type', 'text/xml');
