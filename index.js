@@ -4,6 +4,11 @@ import twilio from 'twilio';
 // Account SID and auth token are stored in environment variables.
 var app = express();
 
+
+app.get('/', function(req, res) {
+  res.send("Hello World!");
+})
+
 app.post('/voice', function(req, res) {
   console.log('Call received.');
 
@@ -24,4 +29,4 @@ app.post('/voice', function(req, res) {
 });
 
 // Make our Express server listen on port 3000.
-app.listen(3000, () => console.log('Listening at http://localhost:3000'));
+app.listen(8888, () => console.log('Listening at http://localhost:8888'));
